@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E786B8022810FBF0001EF8B0 /* FakeUpdateView.h in Headers */ = {isa = PBXBuildFile; fileRef = E786B8012810FBF0001EF8B0 /* FakeUpdateView.h */; };
-		E786B8042810FBF0001EF8B0 /* FakeUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E786B8032810FBF0001EF8B0 /* FakeUpdateView.m */; };
+		E786B80D2810FCF8001EF8B0 /* FakeUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786B80C2810FCF8001EF8B0 /* FakeUpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E786B7FE2810FBF0001EF8B0 /* FakeUpdate.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeUpdate.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		E786B8012810FBF0001EF8B0 /* FakeUpdateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeUpdateView.h; sourceTree = "<group>"; };
-		E786B8032810FBF0001EF8B0 /* FakeUpdateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeUpdateView.m; sourceTree = "<group>"; };
+		E786B80C2810FCF8001EF8B0 /* FakeUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +45,7 @@
 		E786B8002810FBF0001EF8B0 /* FakeUpdate */ = {
 			isa = PBXGroup;
 			children = (
-				E786B8012810FBF0001EF8B0 /* FakeUpdateView.h */,
-				E786B8032810FBF0001EF8B0 /* FakeUpdateView.m */,
+				E786B80C2810FCF8001EF8B0 /* FakeUpdateView.swift */,
 			);
 			path = FakeUpdate;
 			sourceTree = "<group>";
@@ -60,7 +57,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E786B8022810FBF0001EF8B0 /* FakeUpdateView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +92,7 @@
 				TargetAttributes = {
 					E786B7FD2810FBF0001EF8B0 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -132,7 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E786B8042810FBF0001EF8B0 /* FakeUpdateView.m in Sources */,
+				E786B80D2810FCF8001EF8B0 /* FakeUpdateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +250,7 @@
 		E786B8082810FBF0001EF8B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -260,10 +258,17 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = FakeUpdateView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.sonatta.FakeUpdate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -271,6 +276,7 @@
 		E786B8092810FBF0001EF8B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -278,10 +284,16 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = FakeUpdateView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.sonatta.FakeUpdate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
