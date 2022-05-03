@@ -17,7 +17,7 @@ public class ScreenUpdateView: ScreenSaverView {
   public override init(frame frameRect: NSRect, isPreview: Bool) {
     super.init(frame: frameRect, isPreview: isPreview)!
       //wantsLayer = true
-      //layer?.backgroundColor = NSColor.lightGray.cgColor
+      //layer?.backgroundColor = NSColor.black.cgColor
       let view = NSHostingView(rootView: FakeUpdateView())
       view.translatesAutoresizingMaskIntoConstraints = false
       addSubview(view)
@@ -32,7 +32,7 @@ public class ScreenUpdateView: ScreenSaverView {
     }
 }
 struct FakeUpdateView: View {
-    @State var progressValue: Double = 0
+    @State var progressValue: Double = Double.random(in: 0..<1)
     var body: some View {
         VStack(){
             EmptyView()
@@ -40,12 +40,13 @@ struct FakeUpdateView: View {
             Image(systemName: "applelogo")
                 .font(.system(size: 90))
                 .padding(.vertical, 110)
+                .foregroundColor(.white)
             ProgressView(value: progressValue)
                 .progressViewStyle(LinearProgressViewStyle(tint: Color.white))
-                .background(Color.black)
                 .padding()
         }
         .frame(width: 250, height: 300)
+        .background(Color.black)
             
     }
 }
